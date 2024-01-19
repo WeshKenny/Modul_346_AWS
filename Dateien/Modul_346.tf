@@ -81,6 +81,13 @@ resource "aws_security_group" "allow_ssh" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port = 80    # Damit öffnen wir den HTTP Port
+    to_port = 80
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
 }
 
 resource "aws_instance" "m346_Terraform_Instanz" {
