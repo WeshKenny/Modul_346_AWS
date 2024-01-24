@@ -62,4 +62,5 @@ mit -u geben wir den Benutzer an.
 
 Wenn man alle diese Schritte gemacht haben, dann haben wir 2 Linux Instanzen aufgesetzt eine davon wurde mit Terraform erstellt, welche apache installiert hat. Dort haben wir auch eine Webseite, auf die man sich verbinden kann. Die andere Instanz ist mit einer MySQL Datenbank verbunden. Die Datenbank besitzt bereits Tabellen welche jedoch noch keinen Inhalt haben. Ein VPC (Netzwerk) haben wir auch 2, wir sollten im einen VPC auch noch ein Subnetz haben. Wir haben Sicherheits gruppen erstellt, die den Port 80 so wie den Port 22 offen haben, damit wir uns mit HTTP und SSH drauf verbinden können.
 
+<h2>Workshop 3 & 4</h2>
 
