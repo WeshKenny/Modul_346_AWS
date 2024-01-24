@@ -48,7 +48,7 @@ Wenn man sich Via SSH verbinden will, braucht man die Public IP Adresse.
 
 Das Skript befindet sich hier:
 
-
+Dateien/Modul_346.tf
 
 
 Datenbank Erstellen und verbinden
