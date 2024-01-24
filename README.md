@@ -86,7 +86,11 @@ Wir haben uns für das Projekt eine Domäne von [!Hostpoint](https://www.hostpoi
 
 <h4>2. Ein öffentliches Zertifikat anfordern</h4>
 
+Um eine Cloudfront distribution zu erstellen ist ein öffentliches Zertifikat notwendig. Damit wir ein Zertifikat anfordern können, müssen wir folgendes tun
 
+1. In der Suchleiste suchen wir nach `Certificate Manager`
+2. Dort wählen wir `Ein Zertifikat anfordern` aus.
+3. Wir klicken `weiter`
 
 <h4>3. </h4>
 
