@@ -79,3 +79,27 @@ Wir haben uns dann ein Wenig darüber informiert, wie wir das machen können und
 - Route 53 (Traffic von der Domäne zur Cloudfront zu Routen)
 
 <h3>Anleitung fürs hosten einer Statischen Webseite mit Cloudfront:</h3> 
+
+<h4>1. Regestrieren einer Domäne</h4>
+
+Wir haben uns für das Projekt eine Domäne von [!Hostpoint](https://www.hostpoint.ch/en/) geholt, damit wir der Webseite selbst eine Domäne geben können.
+
+<h4>2. Ein öffentliches Zertifikat anfordern</h4>
+
+
+
+<h4>3. </h4>
+
+<h4>4. </h4>
+
+<h4>5. </h4>
+
+<h4>6. </h4>
+
+<h4>7. </h4>
+
+<h4>8.</h4>
+
+<h4>9. </h4>
+
+<h4>10. </h4>
