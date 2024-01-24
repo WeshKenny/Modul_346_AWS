@@ -78,13 +78,13 @@ Wir haben uns dann ein Wenig darüber informiert, wie wir das machen können und
 - Certificate Manager (für das SSL Zertifikat)
 - Route 53 (Traffic von der Domäne zur Cloudfront zu Routen)
 
-<h3>Anleitung fürs hosten einer Statischen Webseite mit Cloudfront:</h3> 
+<h2>Anleitung fürs hosten einer Statischen Webseite mit Cloudfront:</h2> 
 
-<h4>1. Regestrieren einer Domäne</h4>
+<h3>1. Regestrieren einer Domäne</h3>
 
 Wir haben uns für das Projekt eine Domäne von [!Hostpoint](https://www.hostpoint.ch/en/) geholt, damit wir der Webseite selbst eine Domäne geben können.
 
-<h4>2. Hosted zone erstellen</h4>
+<h3>2. Hosted zone erstellen</h3>
 
 Wir brauchen eine "Hosted zone", in der wir DNS Records erstellen und die dann zu einer einzelnen Domäne gehören.
 
@@ -93,7 +93,7 @@ Wir brauchen eine "Hosted zone", in der wir DNS Records erstellen und die dann z
 3. Dort geben wir dann unsere Root Domäne an. bei uns: `elfenau3006.ch`
 4. Dann klicken wir auf `Create hosted zone`.
 
-<h4>3. Ein öffentliches Zertifikat anfordern</h4>
+<h3>3. Ein öffentliches Zertifikat anfordern</h3>
 
 Um eine Cloudfront distribution zu erstellen ist ein öffentliches Zertifikat notwendig. Damit wir ein Zertifikat anfordern können, müssen wir folgendes tun
 
@@ -107,7 +107,7 @@ Um eine Cloudfront distribution zu erstellen ist ein öffentliches Zertifikat no
 6. Danach können wir unsere Domains sehen, die den Status `Pending`haben. Wir klicken in dem Menü auf "Create records in Route 53" und klicken "Create records".
    Es sollte nicht zulange gehen, bis unser Zertifikat auf `Issued`.
    
-<h4>4. Hostpoint Nameserver ändern</h4>
+<h3>4. Hostpoint Nameserver ändern</h3>
 
 Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von AWS zuweisen.
 
