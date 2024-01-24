@@ -82,7 +82,7 @@ Wir haben uns dann ein Wenig darüber informiert, wie wir das machen können und
 
 <h3>1. Regestrieren einer Domäne</h3>
 
-Wir haben uns für das Projekt eine Domäne von [!Hostpoint](https://www.hostpoint.ch/en/) geholt, damit wir der Webseite selbst eine Domäne geben können.
+Wir haben uns für das Projekt eine Domäne von [Hostpoint](https://www.hostpoint.ch/en/) geholt, damit wir der Webseite selbst eine Domäne geben können.
 
 <h3>2. Hosted zone erstellen</h3>
 
@@ -111,15 +111,16 @@ Um eine Cloudfront distribution zu erstellen ist ein öffentliches Zertifikat no
 
 Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von AWS zuweisen.
 
-1. Bei [!Hostpoint](https://www.hostpoint.ch/en) melden wir uns an und gehen auf unsere Domain und klicken auf "edit"S
+1. Bei [Hostpoint](https://www.hostpoint.ch/en) melden wir uns an und gehen auf unsere Domain und klicken auf "edit"S
 2. Nun müssen wir die Daten von der Route 53 Zone dort bei Hostpoint angeben:
+   
    <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/799eaa4f-c553-44a0-a897-ed196d42d818">
    
    Diese `Value/Route traffic to` setzen wir so ein:
 
    <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/958da29b-8d2d-4a64-98bd-ed39f502b8cb">
 
-3. Dann klicken wir auf "Check Name Servers"
+4. Dann klicken wir auf "Check Name Servers"
    dies kann bis zu 24 Stunden dauern.
    
 <h4>5. </h4>
