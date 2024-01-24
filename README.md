@@ -122,15 +122,31 @@ Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von
 
 4. Dann klicken wir auf "Check Name Servers"
    dies kann bis zu 24 Stunden dauern.
+5. Wenn es dann den Nameserver angenommen hat, dann ist auf das Zertifikat bereit zur Nutzung.
    
-<h4>5. </h4>
+<h3>5. Erstellen eines S3 Buckets fürs Hosten der subdomain</h3>
 
-<h4>6. </h4>
+1. In der Suchleiste suchen wir nach `S3`.
+2. Auf `Create bucket` klicken
+3. "Bucket name" setzen wir auf `www.elfenau3006.ch`
+4. Auf "Create bucket" klicken.
 
-<h4>7. </h4>
+<h3>6. Erstellen eines S3 Buckets fürs hosten der root Domain</h3>
 
-<h4>8.</h4>
+1. In der Suchleiste suchen wir nach `S3`.
+2. Auf `Create bucket` klicken
+3. "Bucket name" setzen wir auf `elfenau3006.ch`
+4. Auf "Create bucket" klicken.
 
-<h4>9. </h4>
+<h3>7. Html files auf Subdomain Bucket hochladen</h3>
 
-<h4>10. </h4>
+1. In der Suchleiste suchen wir nach `S3`.
+2. Auf den bucket `www.elfenau3006.ch` klicken
+3. Klicken auf `Upload`.
+4. Die Dateien auswählen und auf "Add files" klicken.
+
+<h3>8.</h3>
+
+<h3>9. </h3>
+
+<h3>10. </h3>
