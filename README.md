@@ -3,7 +3,7 @@ Modul 346 von Gibb
 
 Dokumentation Modul 346
 
-<h2> EC2 Instanz erstellen mit AWS (GUI) </h2>
+<h3> EC2 Instanz erstellen mit AWS (GUI) </h3>
 
 Wenn wir uns eingeloggt haben, geben wir in der Suchleiste oben „EC2“ ein und wählen den ersten Service aus.
  ![image](https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/3c68e1da-39ba-42d3-8e4c-ee1f4b6d7525)
@@ -44,9 +44,10 @@ Wenn man sich Via SSH verbinden will, braucht man die Public IP Adresse.
 
 
 
-Instanz erstellen via Terraform
+<h3>Instanz erstellen via Terraform</h3> 
 
 Das Skript befindet sich hier:
+
 
 
 
