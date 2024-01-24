@@ -84,18 +84,44 @@ Wir haben uns dann ein Wenig darüber informiert, wie wir das machen können und
 
 Wir haben uns für das Projekt eine Domäne von [!Hostpoint](https://www.hostpoint.ch/en/) geholt, damit wir der Webseite selbst eine Domäne geben können.
 
-<h4>2. Ein öffentliches Zertifikat anfordern</h4>
+<h4>2. Hosted zone erstellen</h4>
+
+Wir brauchen eine "Hosted zone", in der wir DNS Records erstellen und die dann zu einer einzelnen Domäne gehören.
+
+1. In der Suchleiste suchen nach `Route 53`.
+2. Dort klicken wir auf `Create hosted zone`.
+3. Dort geben wir dann unsere Root Domäne an. bei uns: `elfenau3006.ch`
+4. Dann klicken wir auf `Create hosted zone`.
+
+<h4>3. Ein öffentliches Zertifikat anfordern</h4>
 
 Um eine Cloudfront distribution zu erstellen ist ein öffentliches Zertifikat notwendig. Damit wir ein Zertifikat anfordern können, müssen wir folgendes tun
 
-1. In der Suchleiste suchen wir nach `Certificate Manager`
-2. Dort wählen wir `Ein Zertifikat anfordern` aus.
-3. Wir klicken `weiter`
+1. In der Suchleiste suchen wir nach `Certificate Manager`.
+2. Dort wählen wir `Request a certificate` aus.
+3. Wir klicken `next`
+4. Beim "Fully qualified domain name " geben wir unsere Domäne ein, die wir von Hostpoint gekauft haben, also: `elfenau3006.ch`.
+   Wir fügen noch einen Zertifikatsnamen hinzu und zwar unsere Domäne, jedoch noch mit einem `*` vordran. Also: `*.elfenau3006.ch`.
+   Damit fügen wir auch alle Subdomains noch hinzu.
+5. Danach klicken wir auf `Anfrage`.
+6. Danach können wir unsere Domains sehen, die den Status `Pending`haben. Wir klicken in dem Menü auf "Create records in Route 53" und klicken "Create records".
+   Es sollte nicht zulange gehen, bis unser Zertifikat auf `Issued`.
+   
+<h4>4. Hostpoint Nameserver ändern</h4>
 
-<h4>3. </h4>
+Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von AWS zuweisen.
 
-<h4>4. </h4>
+1. Bei [!Hostpoint](https://www.hostpoint.ch/en) melden wir uns an und gehen auf unsere Domain und klicken auf "edit"S
+2. Nun müssen wir die Daten von der Route 53 Zone dort bei Hostpoint angeben:
+   <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/799eaa4f-c553-44a0-a897-ed196d42d818">
+   
+   Diese `Value/Route traffic to` setzen wir so ein:
 
+   <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/958da29b-8d2d-4a64-98bd-ed39f502b8cb">
+
+3. Dann klicken wir auf "Check Name Servers"
+   dies kann bis zu 24 Stunden dauern.
+   
 <h4>5. </h4>
 
 <h4>6. </h4>
