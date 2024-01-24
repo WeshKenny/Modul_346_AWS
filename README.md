@@ -30,18 +30,7 @@ Danach haben wir alles angegeben und können nun die Instanz starten.
 Nun müssen wir noch kurz warten, da die Instanz noch am Hochfahren ist. Sobald sie bereit ist steht dort „Läuft“ so kann man sich dann auch mit dem SSH drauf verbinden.  
 ![image](https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/15252d90-227e-4ec8-877d-8dbb354a1c67)
 
-Wenn man sich Via SSH verbinden will, braucht man die Public IP Adresse.
-
-
-
-
-
-
-
-
-
-
-
+Wenn man sich Via SSH verbinden will, braucht man die Public IP Adresse von der Instanz.
 
 
 <h3>Instanz erstellen via Terraform</h3> 
@@ -70,5 +59,7 @@ Nun geben wir folgendes in die Kommandozeile ein von der EC2 Instanz:
 **mysql -h database-1.cjuioqs2k05y.us-east-1.rds.amazonaws.com -P 3306 -u vmadmin -p**
 
 mit -u geben wir den Benutzer an.
+
+Wenn man alle diese Schritte gemacht haben, dann haben wir 2 Linux Instanzen aufgesetzt eine davon wurde mit Terraform erstellt, welche apache installiert hat. Dort haben wir auch eine Webseite, auf die man sich verbinden kann. Die andere Instanz ist mit einer MySQL Datenbank verbunden. Die Datenbank besitzt bereits Tabellen welche jedoch noch keinen Inhalt haben. Ein VPC (Netzwerk) haben wir auch 2, wir sollten im einen VPC auch noch ein Subnetz haben. Wir haben Sicherheits gruppen erstellt, die den Port 80 so wie den Port 22 offen haben, damit wir uns mit HTTP und SSH drauf verbinden können.
 
 
