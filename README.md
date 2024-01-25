@@ -145,8 +145,36 @@ Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von
 3. Klicken auf `Upload`.
 4. Die Dateien auswählen und auf "Add files" klicken.
 
-<h3>8.</h3>
+<h3>8. Root Domain Bucket umleitung einstellen</h3>
 
-<h3>9. </h3>
+Unser Ziel ist es der wenn man die Root Domain eingibt: `elfenau3006.ch`, das man weitergeleitet wird auf `www.elfenau3006.ch`.
 
-<h3>10. </h3>
+1. In der Suchleiste suchen wir nach `S3`.
+2. Wähle den bucket aus mit der root domain. Bei uns war es: `elfenau3006.ch`
+3. Bei `Static website hosting` "edit" auswählen.
+4. auf "Enable setzen".
+5. Dort dann die Subdomain angeben. Bei uns: `www.elfenau3006.ch`.
+6. HTTPS als Protokol auswählen.
+7. Einstellungen Speichern.
+8. Den Endpoint merken.
+   
+<h3>9. Cloudfront Distribution für Subdomain erstellen</h3>
+
+Damit das öffnen der Webseite schneller geht können wir eine Cloudfront erstellen.
+
+1. In der Suchleiste nach Cloudfront suchen.
+2. "Create Distribution" auswählen.
+3. Unter "Origin wählen wir bei "Origin domain" unsere Subdomain.
+4. **Origin access** --> **Legacy access identities**
+5. Wir erstellen eine neue OAI und wählen sie aus.
+6. Bucket police auf "Yes, update the bucket policy"
+7. `Redirect HTTP to HTTPS` auswählen.
+8. "Web Application Firewall (WAF) ausschalten
+9. Wir wählen "Add Item" unt geben dort dann unsere Subdomain ein: `www.elfenau3006.ch`
+10. Wir wählen dann als nächstes unser SSL Certifikat aus
+11. Bei `Default root object` wählen wir unsere HTML seite aus, damit wenn man unsere Seite aufruft, dass dann nunsere HTML seite angezeigt wird.
+12. Danach auf `Create Distribution` klicken.
+
+<h3>10.  Cloudfront Distribution für root domain erstellen</h3>
+
+Das gleiche machen wir jetzt noch mit der root domain. Wenn man dann dort zugreift wird man auf den anderen Bucket witergelietet.
