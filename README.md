@@ -234,3 +234,11 @@ dann sollte es uns weiterleiten auf `www.elfenau3006.ch` und so auch die Webseit
 
 <h2>Konsten der Services</h2>
 
+Unsere Services:
+
+| Services            | 
+| --------------------|
+| S3                  | 
+| Cloudfront          | 
+| Certificate Manager | 
+| Route 53            | 
