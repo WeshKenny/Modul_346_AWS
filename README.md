@@ -193,5 +193,44 @@ Das gleiche machen wir jetzt noch mit der root domain. Wenn man dann dort zugrei
 
 <h3>11. DNS Traffic von Domain zu CLoudfront routen.</h3>
 
+Wir verfügen jetzt über eine einseitige Website in unserem S3-Bucket, die eine CloudFront Verteilung verwendet. Um den Internetdatenverkehr für unsere Domäne an unsere CloudFront-Verteileung weiterzuleiten müssen wir die Folgenden schirtte durchführen:
 
+1. In der Suchleiste `Route 53` eingeben.
+2. "Hostet zones" auswählen.
+3. In der Liste, den Namen von unserer Domäne auswählen.
+4. `Create record` auswählen.
+5. "Simmple routing" auswählen und "next" klicken.
+6. `Define simple record` auswählen.
+7. "Record name" `www` schreiben
+8. Record type wählen wir `A - Routes traffic to an IPv4 address and some AWS resources.`
+9. In "Value/Route traffic to" wählen wir `Alias to Cloudfront distribution.`
+10. Danach wählen wir die Distribution aus die uns angezeigt wird.
+11. Dannach können wir auf `Define simple record`.
+
+Wir haben jetzt eingestelltl, das es den Datenverkehr zu unserer Webseite Routen soll.
+Als nächstes wollen wir einen Alias zu unserer root domain hinzufügen. Somit wir führt es dann zum S3 Bucket, der den Datenverkehr nach `www.elfenau3006.ch` leitet.
+
+1. Unter "Configure records" wählen wir "Define simple record aus.
+2. "Record name" lassen wir so wie er ist.
+3. Record type wählen wir `A - Routes traffic to an IPv4 address and some AWS resources.`
+4. In "Value/Route traffic to" wählen wir `Alias to Cloudfront distribution.`
+5. Wir wählen wieder die Distribution aus die angezeigt wird.
+6. Dannach können wir auf `Define simple record`.
+7. Nun wählen wir noch `Create records`
+
+<h3>12. Webseite testen</h3>
+
+Um zu schauen, ob alles funktioniert, geben wir die Domain ein:
+
+`www.elfenau3006.ch` 
+
+Es sollte uns nun die Webseite anzeigen, die wir auf dem S3 Bucket hochgeladen haben. Wen wir nun auch noch die root Domain eingeben:
+
+`elfenau3006.ch`
+
+dann sollte es uns weiterleiten auf `www.elfenau3006.ch` und so auch die Webseite anzeigen.
+
+[Informationen](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started-cloudfront-overview.html) 
+
+<h2>Konsten der Services</h2>
 
