@@ -78,6 +78,15 @@ Wir haben uns dann ein Wenig darüber informiert, wie wir das machen können und
 - Certificate Manager (für das SSL Zertifikat)
 - Route 53 (Traffic von der Domäne zur Cloudfront zu Routen)
 
+**Erklärung Cloudfront:**
+
+Warum brauchen wir noch Cloudfront für unsere Webseite, wenn wir doch schon einen S3 Bucket haben mit der Webseite?
+Cloudfront ist dafür da, um Abfragen zu verkürzen (Latenzzeit). Mit CloudFront kann man die Inhaltsbereitstellung der Webinhalte über das Content Delivery Network (CDN) an Edge-Standorten beschleunigen, während man die eigentlichen Dateien in S3-Buckets speichert. CloudFront-Quellen stammen möglicherweise nicht unbedingt aus S3, aber zur einfacheren Visualisierung der S3-Integration mit CloudFront:
+
+![image](https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/506bd058-6f16-4722-ae73-c741291d2c65)
+
+
+
 <h2>Anleitung fürs hosten einer Statischen Webseite mit Cloudfront:</h2> 
 
 <h3>1. Regestrieren einer Domäne</h3>
@@ -242,3 +251,7 @@ Unsere Services:
 | Cloudfront          | 
 | Certificate Manager | 
 | Route 53            | 
+
+Von diesen 4 Services ist der teuerste "Route 53"
+
+Er kostet uns rund `1.01$` Pro Monat. Die anderen Services kosten uns alle weniger als `0.10$`. Also gesamt haft kostet uns das ganze etwa **`1.31$`** Den Monat.
