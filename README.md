@@ -178,3 +178,20 @@ Damit das öffnen der Webseite schneller geht können wir eine Cloudfront erstel
 <h3>10.  Cloudfront Distribution für root domain erstellen</h3>
 
 Das gleiche machen wir jetzt noch mit der root domain. Wenn man dann dort zugreift wird man auf den anderen Bucket witergelietet.
+
+1. In der Suchleiste nach Cloudfront suchen.
+2. "Create Distribution" auswählen.
+3. Unter "Origin wählen wir bei "Origin domain" unsere root domain.
+4. **Origin access** --> **Legacy access identities**
+5. Wir erstellen eine neue OAI und wählen sie aus.
+6. Bucket police auf "Yes, update the bucket policy"
+7. `Redirect HTTP to HTTPS` auswählen.
+8. "Web Application Firewall (WAF) ausschalten
+9. Wir wählen "Add Item" unt geben dort dann unsere Subdomain ein: `elfenau3006.ch`
+10. Wir wählen dann als nächstes unser SSL Certifikat aus
+12. Danach auf `Create Distribution` klicken.
+
+<h3>11. DNS Traffic von Domain zu CLoudfront routen.</h3>
+
+
+
