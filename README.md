@@ -114,11 +114,11 @@ Damit alles dann aufgelöst wird, müssen wir noch der Domain den Nameserver von
 1. Bei [Hostpoint](https://www.hostpoint.ch/en) melden wir uns an und gehen auf unsere Domain und klicken auf "edit"S
 2. Nun müssen wir die Daten von der Route 53 Zone dort bei Hostpoint angeben:
    
-   <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/799eaa4f-c553-44a0-a897-ed196d42d818">
+   <img width="374" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/799eaa4f-c553-44a0-a897-ed196d42d818">
    
    Diese `Value/Route traffic to` setzen wir so ein:
 
-   <img width="274" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/958da29b-8d2d-4a64-98bd-ed39f502b8cb">
+   <img width="374" alt="image" src="https://github.com/WeshKenny/Modul_346_AWS/assets/115809872/958da29b-8d2d-4a64-98bd-ed39f502b8cb">
 
 4. Dann klicken wir auf "Check Name Servers"
    dies kann bis zu 24 Stunden dauern.
