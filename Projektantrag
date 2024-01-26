@@ -2,3 +2,6 @@ Unser Ziel war es, etwas mit einem S3 Bucket zu machen und eine Webseite zu host
 Wir haben nur ein Projekt gemacht jedoch etwas grösser. Wir wollen eine Webseite erstellen,
 die öffentlich zugänglich ist und dazu noch ein gültiges SSL Zertifikat besitzt. 
 Als domain wollten wir eine eigene verwenden.
+
+Die kosten für das Projekt wollen wir so gering wie möglich halten, wofür S3 Bucket perfekt daür geeignet ist.
+Die Domain wollen wir von Hostpoint kaufen und dann für das Projekt verwenden.
